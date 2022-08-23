@@ -4,7 +4,7 @@ const outputRef = document.querySelector('#name-output');
 const onInputChange = (event) => {
     if (inputRef.value !== '') {
         outputRef.textContent = event.currentTarget.value;
-    } else {
+    } else {    
         outputRef.textContent = 'Anonymous';
     }
 }

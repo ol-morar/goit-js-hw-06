@@ -12,13 +12,16 @@ inputTypePasswordRef.setAttribute('required', '')
 const onLoginBtnClick = (event) => {
     const {elements: {email, password}} = event.currentTarget
 
-    const userData = {
-        email,
-        password,
-    }
+    const userData = new FormData()
+    userData.append('email',email.value)
+    userData.append('password',password.value)
+    userData.forEach((value,key)=>{
+        console.log(`${key}: ${value}`)
+    })
 
-    console.log('Email:', userData.email.value)
-    console.log('Password:', userData.password.value)
+
+    // console.log('Email:', userData.email.value)
+    // console.log('Password:', userData.password.value)
 
     event.preventDefault()
     event.currentTarget.reset()
