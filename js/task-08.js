@@ -19,10 +19,6 @@ const onLoginBtnClick = (event) => {
         console.log(`${key}: ${value}`)
     })
 
-
-    // console.log('Email:', userData.email.value)
-    // console.log('Password:', userData.password.value)
-
     event.preventDefault()
     event.currentTarget.reset()
 }
